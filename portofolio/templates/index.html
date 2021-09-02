@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="row justify-content-md-center" style="margin: 50px;">
+    {% for port in portofolio %}
+        <div class="col-md-4">
+            <div class="card mb-2" style="width: 20rem; margin-left: 10px; margin-bottom: 10px">
+                <img class="card-img-top" src="{% static port.image %}" alt="" height="286" width="180">
+                <div class="card-body">
+                    <h5 class="card-title">{{ port.title }}</h5>
+                    <p class="card-text text-truncate" style="max-width: 300px;">{{ port.description }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ port.language }}</li>
+                    <li class="list-group-item">{{ port.technology }}</li>
+                </ul>
+                <div class="card-body">
+                    <a href="{% url 'detail' port.pk %}" class="card-link">Read More</a>
+                    <a class="card-link" target="_blank" href={{ port.link }} >Project Link</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<style>
+    body {
+        color: rgb(0, 0, 0);
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 16px;
+    }
+</style>
+{% endblock %}
