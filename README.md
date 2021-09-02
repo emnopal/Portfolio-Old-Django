@@ -1,2 +1,2 @@
-# MyPortfolio
-Website of MyPortfolio, Created using Django+Bootstrap
+# mywebportofolio
+Website of mywebportofolio, Created using Django+Bootstrap

@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block page_content %}
-<h1>{{ portofolio.title }}</h1>
-<div class="row">
-    <div class="col-md-8">
+<div class="row justify-content-md-center" style="margin: 20px; margin-top: 50px;">
+    <div class="col-md-6">
         <img src="{% static portofolio.image %}" alt="" width="100%">
     </div>
     <div class="col-md-4">
+        <h3>{{ portofolio.title }}</h3>
         <h5>About the project:</h5>
         <p>{{ portofolio.description }}</p>
         <br>
